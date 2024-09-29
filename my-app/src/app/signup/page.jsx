@@ -15,6 +15,10 @@ const Signup = () => {
             <input className="p-3 rounded-md" type="text" id="lastName" placeholder="Type Your Last Name " />
           </div>
           <div className="flex flex-col gap-1">
+            <label htmlFor="userName">User Name</label>
+            <input className="p-3 rounded-md" type="text" id="userName" placeholder="Type Your User Name " />
+          </div>
+          <div className="flex flex-col gap-1">
             <label htmlFor="email">Email</label>
             <input className="p-3 rounded-md" type="text" id="email" placeholder="Type Your Email " />
           </div>
