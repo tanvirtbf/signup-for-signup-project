@@ -7,8 +7,8 @@ import Link from 'next/link'
 
 const Signup = () => {
   return (
-    <div className="w-full mt-12 flex items-center justify-center">
-      <div className="w-1/3 p-6 mx-auto  border-[#5E4D3F] border-[1.5px] relative rounded-sm">
+    <div className="w-full mt-12 flex items-center justify-center px-4">
+      <div className="sm:w-[500px] w-full p-6 mx-auto  border-[#5E4D3F] border-[1.5px] relative rounded-sm">
         <div className="absolute -top-6 w-32 h-12  flex justify-center bg-white">
           <h2 className="text-3xl text-[#5E4D3F] text-center">SignUp</h2>
         </div>
