@@ -56,7 +56,7 @@ const Signup = () => {
               <div className="flex justify-center items-center pl-4">
                 <Image src={PasswordIcon} />
               </div>
-              <input className="w-full text-white bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-[#ffffffb7] placeholder:text-base" type="text" id="password" placeholder="Password " />
+              <input className="w-full text-white bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-[#ffffffb7] placeholder:text-base" type="password" id="password" placeholder="Password " />
             </div>
           </div>
           <div className="mt-3">
