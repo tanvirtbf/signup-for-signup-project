@@ -19,7 +19,7 @@ const Signup = () => {
               <div className="flex justify-center items-center pl-4">
                 <Image src={UserIcon} />
               </div>
-              <input className="w-full text-white bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-white placeholder:text-base " type="text" id="firstName" placeholder="First Name " />
+              <input className="w-full text-white bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-[#ffffffb7] placeholder:text-base " type="text" id="firstName" placeholder="First Name " />
             </div>
           </div>
           <div className="flex flex-col gap-1">
@@ -28,7 +28,7 @@ const Signup = () => {
               <div className="flex justify-center items-center pl-4">
                 <Image src={UserIcon} />
               </div>
-              <input className="w-full text-white bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-white placeholder:text-base " type="text" id="firstName" placeholder="Last Name " />
+              <input className="w-full text-white bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-[#ffffffb7] placeholder:text-base " type="text" id="lastName" placeholder="Last Name " />
             </div>
           </div>
           <div className="flex flex-col gap-1">
@@ -37,7 +37,7 @@ const Signup = () => {
               <div className="flex justify-center items-center pl-4">
                 <Image src={UserIcon} />
               </div>
-              <input className="w-full text-white bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-white placeholder:text-base " type="text" id="firstName" placeholder="User Name " />
+              <input className="w-full text-white bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-[#ffffffb7] placeholder:text-base " type="text" id="userName" placeholder="User Name " />
             </div>
           </div>
           <div className="flex flex-col gap-1">
@@ -46,7 +46,7 @@ const Signup = () => {
               <div className="flex justify-center items-center pl-4">
                 <Image src={EmailIcon} />
               </div>
-              <input className="w-full text-white bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-white placeholder:text-base" type="text" id="firstName" placeholder="Email " />
+              <input className="w-full text-white bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-[#ffffffb7] placeholder:text-base" type="text" id="email" placeholder="Email " />
             </div>
           </div>
           <div className="flex flex-col gap-1">
@@ -55,10 +55,10 @@ const Signup = () => {
               <div className="flex justify-center items-center pl-4">
                 <Image src={PasswordIcon} />
               </div>
-              <input className="w-full text-white bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-white placeholder:text-base" type="text" id="firstName" placeholder="Password " />
+              <input className="w-full text-white bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-[#ffffffb7] placeholder:text-base" type="text" id="password" placeholder="Password " />
             </div>
           </div>
-          <div>
+          <div className="mt-3">
             <button className="bg-[#7C6A59] py-3 w-full rounded-lg hover:bg-[#929696] text-white text-2xl font-semibold">SignUP</button>
           </div>
         </form>
