@@ -14,7 +14,7 @@ const Signup = () => {
         <h2 className="text-[#7C6A59] font-medium text-base my-4">Create Your Account</h2>
         <form action="" className="w-full flex flex-col gap-3">
           <div className="flex flex-col gap-1">
-            <label htmlFor="firstName">First Name</label>
+            <label className="text-base text-[#4B4C4C] font-medium" htmlFor="firstName">First Name</label>
             <div className="bg-[#4B4C4C] flex rounded-md py-1">
               <div className="flex justify-center items-center pl-4">
                 <Image src={UserIcon} />
@@ -23,7 +23,7 @@ const Signup = () => {
             </div>
           </div>
           <div className="flex flex-col gap-1">
-            <label htmlFor="lastName">Last Name</label>
+            <label className="text-base text-[#4B4C4C] font-medium" htmlFor="lastName">Last Name</label>
             <div className="bg-[#4B4C4C] flex rounded-md py-1">
               <div className="flex justify-center items-center pl-4">
                 <Image src={UserIcon} />
@@ -32,7 +32,7 @@ const Signup = () => {
             </div>
           </div>
           <div className="flex flex-col gap-1">
-            <label htmlFor="userName">User Name</label>
+            <label className="text-base text-[#4B4C4C] font-medium" htmlFor="userName">User Name</label>
             <div className="bg-[#4B4C4C] flex rounded-md py-1">
               <div className="flex justify-center items-center pl-4">
                 <Image src={UserIcon} />
@@ -41,7 +41,7 @@ const Signup = () => {
             </div>
           </div>
           <div className="flex flex-col gap-1">
-            <label htmlFor="email">Email</label>
+            <label className="text-base text-[#4B4C4C] font-medium" htmlFor="email">Email</label>
             <div className="bg-[#4B4C4C] flex rounded-md py-1">
               <div className="flex justify-center items-center pl-4">
                 <Image src={EmailIcon} />
@@ -50,7 +50,7 @@ const Signup = () => {
             </div>
           </div>
           <div className="flex flex-col gap-1">
-            <label htmlFor="password">Password</label>
+            <label className="text-base text-[#4B4C4C] font-medium" htmlFor="password">Password</label>
             <div className="bg-[#4B4C4C] flex rounded-md py-1">
               <div className="flex justify-center items-center pl-4">
                 <Image src={PasswordIcon} />
