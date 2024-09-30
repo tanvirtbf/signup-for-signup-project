@@ -3,8 +3,12 @@ import React from 'react'
 
 const Signup = () => {
   return (
-    <div className="w-full h-screen items-center justify-center">
-      <div className="w-1/2 p-6 mx-auto flex items-center">
+    <div className="w-full mt-12 flex items-center justify-center">
+      <div className="w-1/2 p-6 mx-auto  border-[#5E4D3F] border-[1.5px] relative rounded-sm">
+        <div className="absolute -top-6 w-32 h-12  flex justify-center bg-white">
+          <h2 className="text-3xl text-[#5E4D3F] text-center">SignUp</h2>
+        </div>
+        <h2 className="text-[#7C6A59] font-medium text-base my-4">Create Your Account</h2>
         <form action="" className="w-full flex flex-col gap-3">
           <div className="flex flex-col gap-1">
             <label htmlFor="firstName">First Name</label>
