@@ -3,6 +3,7 @@ import UserIcon from '../../../public/FormUserIcon.svg'
 import PasswordIcon from '../../../public/FormPasswordIcon.svg'
 import EmailIcon from '../../../public/FormEmailIcon.svg'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Signup = () => {
   return (
@@ -63,7 +64,7 @@ const Signup = () => {
           </div>
           <div className="flex justify-end gap-1 mt-2">
             <p className="text-[#4B4C4C] text-base font-medium ">Already registered?</p>
-            <button className="text-[#7C6A59] hover:text-[#4B4C4C] text-base font-medium ">Login</button>
+            <Link className="text-[#7C6A59] hover:text-[#4B4C4C] text-base font-medium cursor-pointer" href="/">Login</Link>
           </div>
         </form>
       </div>
