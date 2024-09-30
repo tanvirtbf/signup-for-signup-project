@@ -2,6 +2,7 @@
 import UserIcon from '../../../public/FormUserIcon.svg'
 import PasswordIcon from '../../../public/FormPasswordIcon.svg'
 import EmailIcon from '../../../public/FormEmailIcon.svg'
+import Image from 'next/image'
 
 const Signup = () => {
   return (
@@ -14,23 +15,48 @@ const Signup = () => {
         <form action="" className="w-full flex flex-col gap-3">
           <div className="flex flex-col gap-1">
             <label htmlFor="firstName">First Name</label>
-            <input className="bg-[#4B4C4C] border outline-none p-3 rounded-md" type="text" id="firstName" placeholder="Type Your First Name " />
+            <div className="bg-[#4B4C4C] flex rounded-md py-1">
+              <div className="flex justify-center items-center pl-4">
+                <Image src={UserIcon} />
+              </div>
+              <input className="bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-white placeholder:text-base " type="text" id="firstName" placeholder="First Name " />
+            </div>
           </div>
           <div className="flex flex-col gap-1">
             <label htmlFor="lastName">Last Name</label>
-            <input className="border outline-none p-3 rounded-md" type="text" id="lastName" placeholder="Type Your Last Name " />
+            <div className="bg-[#4B4C4C] flex rounded-md py-1">
+              <div className="flex justify-center items-center pl-4">
+                <Image src={UserIcon} />
+              </div>
+              <input className="bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-white placeholder:text-base " type="text" id="firstName" placeholder="Last Name " />
+            </div>
           </div>
           <div className="flex flex-col gap-1">
             <label htmlFor="userName">User Name</label>
-            <input className="border outline-none p-3 rounded-md" type="text" id="userName" placeholder="Type Your User Name " />
+            <div className="bg-[#4B4C4C] flex rounded-md py-1">
+              <div className="flex justify-center items-center pl-4">
+                <Image src={UserIcon} />
+              </div>
+              <input className="bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-white placeholder:text-base " type="text" id="firstName" placeholder="First Name " />
+            </div>
           </div>
           <div className="flex flex-col gap-1">
             <label htmlFor="email">Email</label>
-            <input className="border outline-none p-3 rounded-md" type="text" id="email" placeholder="Type Your Email " />
+            <div className="bg-[#4B4C4C] flex rounded-md py-1">
+              <div className="flex justify-center items-center pl-4">
+                <Image src={EmailIcon} />
+              </div>
+              <input className="bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-white placeholder:text-base " type="text" id="firstName" placeholder="First Name " />
+            </div>
           </div>
           <div className="flex flex-col gap-1">
             <label htmlFor="password">Password</label>
-            <input className="border outline-none p-3 rounded-md" type="password" id="password" placeholder="Set a New Password" />
+            <div className="bg-[#4B4C4C] flex rounded-md py-1">
+              <div className="flex justify-center items-center pl-4">
+                <Image src={PasswordIcon} />
+              </div>
+              <input className="bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-white placeholder:text-base " type="text" id="firstName" placeholder="First Name " />
+            </div>
           </div>
           <div>
             <button className="bg-blue-300 py-3 w-full rounded-lg hover:bg-red-200 font-medium">Submit</button>
