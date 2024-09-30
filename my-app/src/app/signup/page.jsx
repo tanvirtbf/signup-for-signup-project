@@ -37,7 +37,7 @@ const Signup = () => {
               <div className="flex justify-center items-center pl-4">
                 <Image src={UserIcon} />
               </div>
-              <input className="bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-white placeholder:text-base " type="text" id="firstName" placeholder="First Name " />
+              <input className="bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-white placeholder:text-base " type="text" id="firstName" placeholder="User Name " />
             </div>
           </div>
           <div className="flex flex-col gap-1">
@@ -46,7 +46,7 @@ const Signup = () => {
               <div className="flex justify-center items-center pl-4">
                 <Image src={EmailIcon} />
               </div>
-              <input className="bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-white placeholder:text-base " type="text" id="firstName" placeholder="First Name " />
+              <input className="bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-white placeholder:text-base " type="text" id="firstName" placeholder="Email " />
             </div>
           </div>
           <div className="flex flex-col gap-1">
@@ -55,11 +55,11 @@ const Signup = () => {
               <div className="flex justify-center items-center pl-4">
                 <Image src={PasswordIcon} />
               </div>
-              <input className="bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-white placeholder:text-base " type="text" id="firstName" placeholder="First Name " />
+              <input className="bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-white placeholder:text-base " type="text" id="firstName" placeholder="Password " />
             </div>
           </div>
           <div>
-            <button className="bg-blue-300 py-3 w-full rounded-lg hover:bg-red-200 font-medium">Submit</button>
+            <button className="bg-[#7C6A59] py-3 w-full rounded-lg hover:bg-[#929696] text-white text-2xl font-semibold">SignUP</button>
           </div>
         </form>
       </div>
