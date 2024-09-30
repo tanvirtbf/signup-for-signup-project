@@ -59,7 +59,11 @@ const Signup = () => {
             </div>
           </div>
           <div className="mt-3">
-            <button className="bg-[#7C6A59] py-3 w-full rounded-lg hover:bg-[#929696] text-white text-2xl font-semibold">SignUP</button>
+            <button className="bg-[#7C6A59] py-3 w-full rounded-lg hover:bg-[#666969] text-white text-2xl font-semibold">SignUp</button>
+          </div>
+          <div className="flex justify-end gap-1 mt-2">
+            <p className="text-[#4B4C4C] text-base font-medium ">Already registered?</p>
+            <button className="text-[#7C6A59] hover:text-[#4B4C4C] text-base font-medium ">Login</button>
           </div>
         </form>
       </div>
