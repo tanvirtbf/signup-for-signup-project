@@ -18,7 +18,7 @@ const Signup = () => {
             <label className="text-base text-[#4B4C4C] font-medium" htmlFor="firstName">First Name</label>
             <div className="bg-[#4B4C4C] flex rounded-md py-1">
               <div className="flex justify-center items-center pl-4">
-                <Image src={UserIcon} />
+                <Image src={UserIcon} alt="image"/>
               </div>
               <input className="w-full text-white bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-[#ffffffb7] placeholder:text-base " type="text" id="firstName" placeholder="First Name " />
             </div>
@@ -27,7 +27,7 @@ const Signup = () => {
             <label className="text-base text-[#4B4C4C] font-medium" htmlFor="lastName">Last Name</label>
             <div className="bg-[#4B4C4C] flex rounded-md py-1">
               <div className="flex justify-center items-center pl-4">
-                <Image src={UserIcon} />
+                <Image src={UserIcon} alt="image" />
               </div>
               <input className="w-full text-white bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-[#ffffffb7] placeholder:text-base " type="text" id="lastName" placeholder="Last Name " />
             </div>
@@ -36,7 +36,7 @@ const Signup = () => {
             <label className="text-base text-[#4B4C4C] font-medium" htmlFor="userName">User Name</label>
             <div className="bg-[#4B4C4C] flex rounded-md py-1">
               <div className="flex justify-center items-center pl-4">
-                <Image src={UserIcon} />
+                <Image src={UserIcon} alt="image" />
               </div>
               <input className="w-full text-white bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-[#ffffffb7] placeholder:text-base " type="text" id="userName" placeholder="User Name " />
             </div>
@@ -45,7 +45,7 @@ const Signup = () => {
             <label className="text-base text-[#4B4C4C] font-medium" htmlFor="email">Email</label>
             <div className="bg-[#4B4C4C] flex rounded-md py-1">
               <div className="flex justify-center items-center pl-4">
-                <Image src={EmailIcon} />
+                <Image src={EmailIcon} alt="image" />
               </div>
               <input className="w-full text-white bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-[#ffffffb7] placeholder:text-base" type="text" id="email" placeholder="Email " />
             </div>
@@ -54,7 +54,7 @@ const Signup = () => {
             <label className="text-base text-[#4B4C4C] font-medium" htmlFor="password">Password</label>
             <div className="bg-[#4B4C4C] flex rounded-md py-1">
               <div className="flex justify-center items-center pl-4">
-                <Image src={PasswordIcon} />
+                <Image src={PasswordIcon} alt="image" />
               </div>
               <input className="w-full text-white bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-[#ffffffb7] placeholder:text-base" type="password" id="password" placeholder="Password " />
             </div>
