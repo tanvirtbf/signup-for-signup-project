@@ -32,7 +32,10 @@ const Login = () => {
               <input className="w-full text-white bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-[#ffffffb7] placeholder:text-base" type="password" id="password" placeholder="Password " />
             </div>
           </div>
-          <div className="mt-3">
+          <div className="flex justify-end -mt-3">
+            <Link className="text-[#7C6A59] hover:text-[#4B4C4C] text-base font-medium cursor-pointer" href="/signup">Forgot Password?</Link>
+          </div>
+          <div className="mt-1">
             <button className="bg-[#7C6A59] py-3 w-full rounded-lg hover:bg-[#666969] text-white text-2xl font-semibold">Login</button>
           </div>
           <div className="flex justify-end gap-1 mt-2">
