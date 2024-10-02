@@ -64,7 +64,7 @@ const Signup = () => {
           </div>
           <div className="flex justify-end gap-1 mt-2">
             <p className="text-[#4B4C4C] text-base font-medium ">Already registered?</p>
-            <Link className="text-[#7C6A59] hover:text-[#4B4C4C] text-base font-medium cursor-pointer" href="/">Login</Link>
+            <Link className="text-[#7C6A59] hover:text-[#4B4C4C] text-base font-medium cursor-pointer" href="/login">Login</Link>
           </div>
         </form>
       </div>
