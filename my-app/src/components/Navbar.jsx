@@ -21,16 +21,16 @@ const Navbar = () => {
         </div>
         <div className="flex gap-4 h-full items-center">
           <div className='flex justify-center items-center h-full'>
-            <Link className="font-bold text-black text-xl" href="/">Home</Link>
+            <Link className="font-medium text-black text-xl hover:text-[#7B3F00]" href="/">Home</Link>
           </div>
           <div className='flex justify-center items-center h-full'>
-            <Link className="font-bold text-black text-xl" href="/">About</Link>
+            <Link className="font-medium text-black text-xl hover:text-[#7B3F00]" href="/">About</Link>
           </div>
           <div className='flex justify-center items-center h-full'>
-            <Link className=" font-bold text-black text-xl" href="/">Services</Link>
+            <Link className=" font-medium text-black text-xl hover:text-[#7B3F00]" href="/">Services</Link>
           </div>
           <div className='flex justify-center items-center h-full'>
-            <Link className="font-bold text-black text-xl" href="/">Contact Us</Link>
+            <Link className="font-medium text-black text-xl hover:text-[#7B3F00]" href="/">Contact Us</Link>
           </div>
         </div>
         <div className="flex gap-3 items-center">
