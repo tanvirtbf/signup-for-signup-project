@@ -1,7 +1,7 @@
-"use client"
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 import { SlSocialFacebook } from "react-icons/sl";
 import { PiSkypeLogoThin } from "react-icons/pi";
 import { CiTwitter } from "react-icons/ci";
@@ -10,54 +10,58 @@ import { PiTelegramLogoLight } from "react-icons/pi";
 import { PiThreadsLogoLight } from "react-icons/pi";
 import { PiWhatsappLogoThin } from "react-icons/pi";
 
-
-
-
 const Footer = () => {
   return (
-    <div className='w-full flex flex-col'>
-        <div className='w-full h-24 bg-[#D1D1D1] flex flex-col justify-center items-center'>
-            <div>
-                <h2 className='text-center font-bold text-black text-2xl'>Follow Us</h2>
-            </div>
-            <div>
-                <Link href={'/login'}>
-                    <SlSocialFacebook />
-                </Link>
-            </div>
-            <div>
-                <Link href={'/login'}>
-                    <PiSkypeLogoThin />
-                </Link>
-            </div>
-            <div>
-                <Link href={'/login'}>
-                    <CiTwitter />
-                </Link>
-            </div>
-            <div>
-                <Link href={'/login'}>
-                    <CiInstagram />
-                </Link>
-            </div>
-            <div>
-                <Link href={'/login'}>
-                    <PiTelegramLogoLight />
-                </Link>
-            </div>
-            <div>
-                <Link href={'/login'}>
-                    <PiThreadsLogoLight />
-                </Link>
-            </div>
-            <div>
-                <Link href={'/login'}>
-                    <PiWhatsappLogoThin />
-                </Link>
-            </div>
+    <div className="w-full flex flex-col mt-10">
+      <div className="w-full py-5 bg-[#D1D1D1] flex flex-col justify-center items-center gap-5">
+        <div>
+          <h2 className="text-center font-bold text-black text-2xl">
+            Follow Us
+          </h2>
         </div>
+        <div className="flex gap-20">
+          <div>
+            <Link href={"/login"}>
+              <SlSocialFacebook className="text-4xl" />
+            </Link>
+          </div>
+          <div>
+            <Link href={"/login"}>
+              <PiSkypeLogoThin className="text-4xl" />
+            </Link>
+          </div>
+          <div>
+            <Link href={"/login"}>
+              <CiTwitter className="text-4xl" />
+            </Link>
+          </div>
+          <div>
+            <Link href={"/login"}>
+              <CiInstagram className="text-4xl" />
+            </Link>
+          </div>
+          <div>
+            <Link href={"/login"}>
+              <PiTelegramLogoLight className="text-4xl" />
+            </Link>
+          </div>
+          <div>
+            <Link href={"/login"}>
+              <PiThreadsLogoLight className="text-4xl" />
+            </Link>
+          </div>
+          <div>
+            <Link href={"/login"}>
+              <PiWhatsappLogoThin className="text-4xl" />
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className="w-full py-12">
+        <h4 className="text-center">2024 All Rights Reserved</h4>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
