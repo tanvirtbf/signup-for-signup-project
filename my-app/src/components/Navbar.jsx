@@ -12,7 +12,7 @@ const Navbar = () => {
   const clsName = ``
 
   return (
-    <div className="w-full h-20 bg-[#D1D1D1] px-5">
+    <div className="w-full h-20 px-5" style={{boxShadow: '0px 3px 10px #D1D1D1'}}>
 
       <div className="w-full h-full flex justify-between items-center">
 
