@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="w-full h-full flex justify-between items-center">
 
         <div className="">
-          <h1 className="font-bold text-black text-3xl">ADSTERRA</h1>
+          <h1 className="font-bold text-black text-3xl">ADSTERRAA</h1>
         </div>
         <div className="flex gap-2 h-full">
           <Link className="bg-slate-400  h-full w- font-bold text-black text-2xl" href="/">Home</Link>
