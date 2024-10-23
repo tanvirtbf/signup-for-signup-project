@@ -8,9 +8,7 @@ import React from 'react'
 const Navbar = () => {
 
   const router = useRouter()
-
-  const clsName = ``
-
+  
   return (
     <div className="w-full h-20 px-5" style={{boxShadow: '0px 3px 10px #D1D1D1'}}>
 
