@@ -19,7 +19,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <h1 className="font-bold text-black text-3xl cursor-pointer" onClick={()=> router.push('/')}>ADSTERRAA</h1>
         </div>
-        <div className="flex gap-4 h-full items-center">
+        {/* <div className="flex gap-4 h-full items-center">
           <div className='flex justify-center items-center h-full'>
             <Link className="font-medium text-black text-xl hover:text-[#7B3F00]" href="/">Home</Link>
           </div>
@@ -32,7 +32,7 @@ const Navbar = () => {
           <div className='flex justify-center items-center h-full'>
             <Link className="font-medium text-black text-xl hover:text-[#7B3F00]" href="/">Contact Us</Link>
           </div>
-        </div>
+        </div> */}
         <div className="flex gap-3 items-center">
           <div>
             <Link href="/login" className="px-4 py-2 bg-[#7B3F00] rounded-md text-white font-medium text-center">Login</Link>
