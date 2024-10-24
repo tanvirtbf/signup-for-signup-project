@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="w-full py-12">
-        <h4 className="text-center">2024 All Rights Reserved</h4>
+        <h4 className="text-center">2024 All Rights Reserved!</h4>
       </div>
     </div>
   );
