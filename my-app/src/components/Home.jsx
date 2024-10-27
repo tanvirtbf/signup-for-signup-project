@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="container px-5 text-white">
       <div className="wrap flex">
-        <div className="left">
+        <div className="left w-[20%]">
           <div className="profile flex gap-2">
             <div>
               <Image src={UserImage} alt={UserImage} />
@@ -44,8 +44,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="right bg-black">
-          
+        <div className="right bg-black w-[80%]">
+          hello
         </div>
       </div>
     </div>
