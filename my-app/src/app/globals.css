@@ -11,4 +11,9 @@
   html, body{
     font-family: "Roboto", sans-serif;
   }
+  .middle div:hover{
+    color: rgba(247, 126, 126, 0.534);
+    cursor: pointer;
+    transition: color 0.4s ease;
+  }
 }
