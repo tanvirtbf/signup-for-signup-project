@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import UserIcon from '../../public/user.png'
+import Logo from '../../public/logo.png'
 import React from 'react'
 
 const Navbar = () => {
@@ -14,8 +14,8 @@ const Navbar = () => {
 
       <div className="w-full h-full flex justify-between items-center">
 
-        <div className="flex items-center">
-          <h1 className="font-bold text-3xl cursor-pointer" onClick={()=> router.push('/')}>ADSTERRAA</h1>
+        <div className="flex items-center w-20">
+          <Image src={Logo} alt='Logo' onClick={()=> router.push('/')} className='w-full' />
         </div>
 
         <div className='middle flex gap-3 sm:gap-4 sm:text-xl text-base'>
