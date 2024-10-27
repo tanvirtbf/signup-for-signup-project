@@ -10,7 +10,7 @@ const Navbar = () => {
   const router = useRouter()
   
   return (
-    <div className="w-full h-20 px-5 text-white">
+    <div className="w-full h-20 px-5 text-white fixed top-0">
 
       <div className="w-full h-full flex justify-between items-center">
 
