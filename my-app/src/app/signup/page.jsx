@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 const Signup = () => {
   return (
-    <div className="w-full h-screen mt-12 flex items-center justify-center px-4">
+    <div className="w-full h-screen mt-12 flex items-center justify-center px-4 bg-[#1A1D26]">
       <div className="sm:w-[500px] w-full p-6 mx-auto  border-[#5E4D3F] border-[1.5px] relative rounded-sm">
       <div className="absolute -top-6 w-32 h-12  flex justify-center items-center bg-[#5E4D3F] rounded-md">
           <h2 className="text-3xl text-white text-center">Signup</h2>
