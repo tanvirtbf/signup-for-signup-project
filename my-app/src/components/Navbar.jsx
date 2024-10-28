@@ -18,7 +18,7 @@ const Navbar = () => {
           <h1 className='text-2xl cursor-pointer' onClick={()=> router.push('/')}>SignUpForSignUp</h1>
         </div>
 
-        <div className='middle flex gap-3 sm:gap-4 sm:text-xl text-base'>
+        <div className='middle gap-3 sm:gap-4 sm:text-xl text-base sm:flex hidden'>
           <div>Home</div>
           <div>Warning</div>
           <div>Info</div>
