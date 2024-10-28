@@ -1,16 +1,14 @@
-"use client";
-import { useRouter } from "next/navigation";
-import UserImage from "../../public/user.png";
-import Image from "next/image";
-import { MdOutlineDashboard } from "react-icons/md";
 import FirstPart from "./FirstPart";
+import SecondPart from "./SecondPart";
+import ThirdPart from "./ThirdPart";
 
 export default function Home() {
-  const router = useRouter();
 
   return (
-    <div className="container px-5 text-white">
+    <div className="px-5 text-white">
       <FirstPart />
+      <SecondPart />
+      <ThirdPart />
     </div>
   );
 }

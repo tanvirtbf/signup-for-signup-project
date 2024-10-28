@@ -13,7 +13,7 @@ import { PiWhatsappLogoThin } from "react-icons/pi";
 const Footer = () => {
   return (
     <div className="w-full flex flex-col mt-10">
-      {/* <div className="w-full py-5 bg-[#D1D1D1] flex flex-col justify-center items-center gap-5">
+      <div className="w-full py-5 bg-[#D1D1D1] flex flex-col justify-center items-center gap-5">
         <div>
           <h2 className="text-center font-bold text-black text-2xl">
             Follow Us
@@ -58,8 +58,8 @@ const Footer = () => {
         </div>
       </div>
       <div className="w-full py-12">
-        <h4 className="text-center">2024 All Rights Reserved!</h4>
-      </div> */}
+        <h4 className="text-center text-white">2024 All Rights Reserved!</h4>
+      </div>
     </div>
   );
 };

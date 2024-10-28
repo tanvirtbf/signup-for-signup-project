@@ -10,12 +10,12 @@ const Navbar = () => {
   const router = useRouter()
   
   return (
-    <div className="w-full h-20 px-5 text-white fixed top-0">
+    <div className="w-full h-20 px-5 text-white fixed top-0 bg-[#1A1D26]">
 
       <div className="w-full h-full flex justify-between items-center">
 
-        <div className="flex items-center w-20">
-          <Image src={Logo} alt='Logo' onClick={()=> router.push('/')} className='w-full' />
+        <div className="flex items-center">
+          <h1 className='text-2xl cursor-pointer' onClick={()=> router.push('/')}>SignUpForSignUp</h1>
         </div>
 
         <div className='middle flex gap-3 sm:gap-4 sm:text-xl text-base'>
