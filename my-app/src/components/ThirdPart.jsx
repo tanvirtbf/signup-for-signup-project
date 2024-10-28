@@ -25,7 +25,7 @@ const ThirdPart = () => {
   ]
 
   return (
-    <div className="w-full flex lg:h-screen h-auto flex-col justify-start items-center gap-5">
+    <div className="w-full flex lg:h-screen h-auto flex-col justify-start items-center gap-5 lg:py-0 py-12">
       <div className="bg-yellow-950 sm:w-1/2 w-full rounded-sm text-xl">
         <p className="text-white text-center">
           Best Ad Network For Lead
