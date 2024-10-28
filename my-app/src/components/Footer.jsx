@@ -22,37 +22,37 @@ const Footer = () => {
         <div className="flex gap-20">
           <div>
             <Link href={"/login"}>
-              <SlSocialFacebook className="text-4xl" />
+              <SlSocialFacebook className="lg:text-4xl text-xl" />
             </Link>
           </div>
           <div>
             <Link href={"/login"}>
-              <PiSkypeLogoThin className="text-4xl" />
+              <PiSkypeLogoThin className="lg:text-4xl text-xl" />
             </Link>
           </div>
           <div>
             <Link href={"/login"}>
-              <CiTwitter className="text-4xl" />
+              <CiTwitter className="lg:text-4xl text-xl" />
             </Link>
           </div>
           <div>
             <Link href={"/login"}>
-              <CiInstagram className="text-4xl" />
+              <CiInstagram className="lg:text-4xl text-xl" />
             </Link>
           </div>
           <div>
             <Link href={"/login"}>
-              <PiTelegramLogoLight className="text-4xl" />
+              <PiTelegramLogoLight className="lg:text-4xl text-xl" />
             </Link>
           </div>
           <div>
             <Link href={"/login"}>
-              <PiThreadsLogoLight className="text-4xl" />
+              <PiThreadsLogoLight className="lg:text-4xl text-xl" />
             </Link>
           </div>
           <div>
             <Link href={"/login"}>
-              <PiWhatsappLogoThin className="text-4xl" />
+              <PiWhatsappLogoThin className="lg:text-4xl text-xl" />
             </Link>
           </div>
         </div>
