@@ -15,7 +15,12 @@ const Navbar = () => {
       <div className="w-full h-full flex justify-between items-center">
 
         <div className="flex items-center">
-          <h1 className='text-2xl cursor-pointer' onClick={()=> router.push('/')}>SignUpForSignUp</h1>
+          <h1 className='text-2xl cursor-pointer' onClick={()=> router.push('/')}>
+            <div>
+            <p className='text-3xl'>SIGN UP</p>
+            <p className='text-xs text-yellow-200 text-center'>For SIGN UP</p>
+            </div>
+          </h1>
         </div>
 
         <div className='middle gap-3 sm:gap-4 sm:text-xl text-base sm:flex hidden'>
