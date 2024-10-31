@@ -19,9 +19,10 @@ const Profile = () => {
   const [select, setSelect] = useState("Dashboard");
 
   return (
-    <div className="container text-white mt-24 px-4 min-h-screen ">
-      <div className="wrapper flex">
-        <div className="flex flex-col gap-3 min-w-56 border-r-2 border-[#ffffff80] pr-4">
+    <div className=" text-white mt-24 px-4 min-h-screen">
+      <div className="wrapper w-full grid lg:grid-cols-12 gap-9 sm:gap-0">
+
+        <div className="flex flex-col gap-3 sm:border-r-2 sm:border-[#ffffff80] pr-4 lg:col-span-2 sm:col-span-3 col-span-12">
           <div className="profile flex gap-2">
             <div>
               <Image src={UserPic} alt={UserPic} />
@@ -50,14 +51,16 @@ const Profile = () => {
             ))}
           </div>
         </div>
-        <div className="px-4 grow">
-          <div className="w-full 4box flex justify-between gap-3">
-            <div className="grow bg-slate-700 text-lg hover:text-red-300 py-5 rounded-md text-center cursor-pointer">Impression</div>
-            <div className="grow bg-slate-700 text-lg hover:text-red-300 py-5 rounded-md text-center cursor-pointer">SignUp</div>
-            <div className="grow bg-slate-700 text-lg hover:text-red-300 py-5 rounded-md text-center cursor-pointer">Custom Room</div>
-            <div className="grow bg-slate-700 text-lg hover:text-red-300 py-5 rounded-md text-center cursor-pointer">CPA Lead</div>
+
+        <div className="px-4 col-span-12 sm:col-span-9 lg:col-span-10">
+          <div className="w-full grid sm:grid-cols-4 gap-3">
+            <div className=" bg-slate-700 text-base sm:text-lg hover:text-red-300 py-1 lg:py-5 rounded-md text-center cursor-pointer">Impression</div>
+            <div className=" bg-slate-700 text-base sm:text-lg hover:text-red-300 py-1 lg:py-5 rounded-md text-center cursor-pointer">SignUp</div>
+            <div className=" bg-slate-700 text-base sm:text-lg hover:text-red-300 py-1 lg:py-5 rounded-md text-center cursor-pointer">Custom Room</div>
+            <div className=" bg-slate-700 text-base sm:text-lg hover:text-red-300 py-1 lg:py-5 rounded-md text-center cursor-pointer">CPA Lead</div>
           </div>
         </div>
+
       </div>
     </div>
   );
