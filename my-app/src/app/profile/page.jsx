@@ -41,7 +41,7 @@ const Profile = () => {
                 className={`cursor-pointer rounded-r-full pl-2 py-2 ${
                   text === select
                     ? "bg-slate-400 text-white"
-                    : "bg-inherit text-slate-400"
+                    : "bg-inherit text-slate-800"
                 }`}
                 onClick={() => setSelect(text)}
               >
