@@ -50,12 +50,12 @@ const Profile = () => {
             ))}
           </div>
         </div>
-        <div className="px-4 bg-black grow">
-          <div className="4box flex">
-            <div>Impression</div>
-            <div>SignUp</div>
-            <div>Custom Room</div>
-            <div>CPA Lead</div>
+        <div className="px-4 grow">
+          <div className="w-full 4box flex justify-between gap-3">
+            <div className="grow bg-slate-700 text-lg hover:text-red-300 py-5 rounded-md text-center cursor-pointer">Impression</div>
+            <div className="grow bg-slate-700 text-lg hover:text-red-300 py-5 rounded-md text-center cursor-pointer">SignUp</div>
+            <div className="grow bg-slate-700 text-lg hover:text-red-300 py-5 rounded-md text-center cursor-pointer">Custom Room</div>
+            <div className="grow bg-slate-700 text-lg hover:text-red-300 py-5 rounded-md text-center cursor-pointer">CPA Lead</div>
           </div>
         </div>
       </div>
