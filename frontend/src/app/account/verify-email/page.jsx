@@ -2,9 +2,9 @@
 import Link from "next/link";
 import { useFormik } from 'formik';
 import { verifyEmailSchema } from '@/validation/schemas';
-// import { useState } from "react";
-// import { useRouter } from "next/navigation";
-// import { useVerifyEmailMutation } from "@/lib/services/auth";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useVerifyEmailMutation } from "@/lib/services/auth";
 
 const initialValues = {
   email: "",
@@ -12,42 +12,34 @@ const initialValues = {
 }
 
 const verifyEmail = () => {
-  // const [serverErrorMessage, setServerErrorMessage] = useState('')
-  // const [serverSuccessMessage, setServerSuccessMessage] = useState('')
-  // const [loading, setLoading] = useState(false);
-  // const router = useRouter()
-  // const [verifyEmail] = useVerifyEmailMutation()
-  // const { values, errors, handleChange, handleSubmit } = useFormik({
-  //   initialValues,
-  //   validationSchema: verifyEmailSchema,
-  //   onSubmit: async (values, action) => {
-  //     setLoading(true);
-  //     try {
-  //       const response = await verifyEmail(values)
-  //       if (response.data && response.data.status === "success") {
-  //         setServerSuccessMessage(response.data.message)
-  //         setServerErrorMessage('')
-  //         action.resetForm()
-  //         setLoading(false);
-  //         router.push('/account/login')
-  //       }
-  //       if (response.error && response.error.data.status === "failed") {
-  //         setServerErrorMessage(response.error.data.message)
-  //         setServerSuccessMessage('')
-  //         setLoading(false);
-  //       }
-  //     } catch (error) {
-  //       console.log(error);
-  //       setLoading(false);
-  //     }
-  //   }
-  // })
-
+  const [serverErrorMessage, setServerErrorMessage] = useState('')
+  const [serverSuccessMessage, setServerSuccessMessage] = useState('')
+  const [loading, setLoading] = useState(false);
+  const router = useRouter()
+  const [verifyEmail] = useVerifyEmailMutation()
   const { values, errors, handleChange, handleSubmit } = useFormik({
     initialValues,
     validationSchema: verifyEmailSchema,
     onSubmit: async (values, action) => {
-      console.log(values)
+      setLoading(true);
+      try {
+        const response = await verifyEmail(values)
+        if (response.data && response.data.status === "success") {
+          setServerSuccessMessage(response.data.message)
+          setServerErrorMessage('')
+          action.resetForm()
+          setLoading(false);
+          router.push('/account/login')
+        }
+        if (response.error && response.error.data.status === "failed") {
+          setServerErrorMessage(response.error.data.message)
+          setServerSuccessMessage('')
+          setLoading(false);
+        }
+      } catch (error) {
+        console.log(error);
+        setLoading(false);
+      }
     }
   })
 
@@ -94,8 +86,8 @@ const verifyEmail = () => {
           </button>
         </form>
         <p className="text-sm text-gray-600 p-1">Already an User ? <Link href="/account/login" className="text-indigo-500 hover:text-indigo-600 transition duration-300 ease-in-out">Login</Link></p>
-        {/* {serverSuccessMessage && <div className="text-sm text-green-500 font-semibold px-2 text-center">{serverSuccessMessage}</div>}
-        {serverErrorMessage && <div className="text-sm text-red-500 font-semibold px-2 text-center">{serverErrorMessage}</div>} */}
+        {serverSuccessMessage && <div className="text-sm text-green-500 font-semibold px-2 text-center">{serverSuccessMessage}</div>}
+        {serverErrorMessage && <div className="text-sm text-red-500 font-semibold px-2 text-center">{serverErrorMessage}</div>}
       </div>
     </div>
   );

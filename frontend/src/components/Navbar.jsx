@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import UserIcon from '../../public/user.png'
 import Logo from '../../public/logo.png'
 import React from 'react'
 
@@ -35,11 +36,11 @@ const Navbar = () => {
             <Link href="/account/login" className="px-4 py-2 bg-[#7B3F00] rounded-md text-white font-medium text-center">Login</Link>
           </div>
           <div>
-            <Link href="/account/signup" className="px-4 py-2 bg-[#7B3F00] rounded-md text-white font-medium text-center">SignUp</Link>
+            <Link href="/account/register" className="px-4 py-2 bg-[#7B3F00] rounded-md text-white font-medium text-center">SignUp</Link>
           </div>
-          {/* <div className='w-12 h-12 flex items-center ml-2'>
+          <div className='w-12 h-12 flex items-center ml-2 cursor-pointer' onClick={()=> router.push('/user/profile')}>
             <Image className='w-full h-full rounded-[50%]' src={UserIcon} />
-          </div> */}
+          </div>
         </div>
 
       </div>

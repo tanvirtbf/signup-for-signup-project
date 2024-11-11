@@ -161,7 +161,7 @@ const Signup = () => {
             {errors.password_confirmation && <div className="text-sm text-red-500 px-2">{errors.password_confirmation}</div>}
           </div>
           <div className="mt-3">
-            <button className="bg-[#7C6A59] py-3 w-full rounded-lg hover:bg-[#666969] text-white text-2xl font-semibold">
+            <button type="submit" className="bg-[#7C6A59] py-3 w-full rounded-lg hover:bg-[#666969] text-white text-2xl font-semibold">
               SignUp
             </button>
           </div>
@@ -171,7 +171,7 @@ const Signup = () => {
             </p>
             <Link
               className="text-[#7C6A59] hover:text-[#4B4C4C] text-base font-medium cursor-pointer"
-              href="/login"
+              href="/account/login"
             >
               Login
             </Link>

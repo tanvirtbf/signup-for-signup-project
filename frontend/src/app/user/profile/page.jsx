@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import UserPic from "../../../public/user.png";
+import UserPic from "../../../../public/user.png";
 
 const Profile = () => {
   const menubar = [
