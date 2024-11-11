@@ -1,7 +1,7 @@
 "use client"
-import UserIcon from '../../../public/FormUserIcon.svg'
-import PasswordIcon from '../../../public/FormPasswordIcon.svg'
-import EmailIcon from '../../../public/FormEmailIcon.svg'
+import UserIcon from '../../../../public/FormEmailIcon.svg'
+import PasswordIcon from '../../../../public/FormPasswordIcon.svg'
+import EmailIcon from '../../../../public/FormEmailIcon.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 
