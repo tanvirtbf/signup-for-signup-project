@@ -1,24 +1,28 @@
-"use client"
-import Link from "next/link";
-import { useState } from "react";
-import { useFormik } from 'formik';
-import { registerSchema } from '@/validation/schemas'
+"use client";
 import { useCreateUserMutation } from "@/lib/services/auth";
-import { useRouter } from 'next/navigation'
+import { registerSchema } from "@/validation/schemas";
+import { useFormik } from "formik";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import EmailIcon from "../../../../public/FormEmailIcon.svg";
+import PasswordIcon from "../../../../public/FormPasswordIcon.svg";
+import UserIcon from "../../../../public/FormUserIcon.svg";
 
 const initialValues = {
   name: "",
   email: "",
   password: "",
-  password_confirmation: ""
-}
+  password_confirmation: "",
+};
 
-const Register = () => {
-  const [serverErrorMessage, setServerErrorMessage] = useState('')
-  const [serverSuccessMessage, setServerSuccessMessage] = useState('')
+const Signup = () => {
+  const [serverErrorMessage, setServerErrorMessage] = useState("");
+  const [serverSuccessMessage, setServerSuccessMessage] = useState("");
   const [loading, setLoading] = useState(false);
-  const router = useRouter()
-  const [createUser] = useCreateUserMutation()
+  const router = useRouter();
+  const [createUser] = useCreateUserMutation();
   const { values, errors, handleChange, handleSubmit } = useFormik({
     initialValues,
     validationSchema: registerSchema,
@@ -26,107 +30,166 @@ const Register = () => {
       setLoading(true);
       try {
         // console.log(values);
-        const response = await createUser(values)
+        const response = await createUser(values);
         // console.log(response);
         if (response.data && response.data.status === "success") {
-          setServerSuccessMessage(response.data.message)
-          setServerErrorMessage('')
-          action.resetForm()
+          setServerSuccessMessage(response.data.message);
+          setServerErrorMessage("");
+          action.resetForm();
           setLoading(false);
-          router.push('/account/verify-email')
+          router.push("/account/verify-email");
         }
         if (response.error && response.error.data.status === "failed") {
-          setServerErrorMessage(response.error.data.message)
-          setServerSuccessMessage('')
+          setServerErrorMessage(response.error.data.message);
+          setServerSuccessMessage("");
           setLoading(false);
         }
       } catch (error) {
         // console.log(error);
+
         setLoading(false);
       }
-    }
-  })
+    },
+  });
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
-      <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-lg">
-        <h2 className="text-2xl font-bold mb-6 text-center">Register</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label htmlFor="name" className="block font-medium mb-2">
+    <div className="w-full h-screen mt-12 flex items-center justify-center px-4 bg-[#1A1D26]">
+      <div className="sm:w-[500px] w-full p-6 mx-auto  border-[#5E4D3F] border-[1.5px] relative rounded-sm">
+        <div className="absolute -top-6 w-32 h-12  flex justify-center items-center bg-[#5E4D3F] rounded-md">
+          <h2 className="text-3xl text-white text-center">Signup</h2>
+        </div>
+        <h2 className="text-[#7C6A59] font-medium text-base my-4">
+          Create Your Account
+        </h2>
+        <form onSubmit={handleSubmit} className="w-full flex flex-col gap-3">
+          <div className="flex flex-col gap-1">
+            <label
+              className="text-base text-[#4B4C4C] font-medium"
+              htmlFor="firstName"
+            >
               Name
             </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={values.name}
-              onChange={handleChange}
-              className="w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-2"
-              placeholder="Enter your name"
-            />
-            {errors.name && <div className="text-sm text-red-500 px-2">{errors.name}</div>}
-
+            <div className="bg-[#4B4C4C] flex rounded-md py-1">
+              <div className="flex justify-center items-center pl-4">
+                <Image src={UserIcon} alt="image" />
+              </div>
+              <input
+                className="w-full text-white bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-[#ffffffb7] placeholder:text-base "
+                type="text"
+                id="name"
+                name="name"
+                value={values.name}
+                onChange={handleChange}
+                placeholder="Enter Your Name"
+              />
+            </div>
+            {errors.name && (
+              <div className="text-sm text-red-500 px-2">{errors.name}</div>
+            )}
           </div>
-          <div className="mb-4">
-            <label htmlFor="email" className="block font-medium mb-2">
+          <div className="flex flex-col gap-1">
+            <label
+              className="text-base text-[#4B4C4C] font-medium"
+              htmlFor="email"
+            >
               Email
             </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={values.email}
-              onChange={handleChange}
-              className="w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-2"
-              placeholder="Enter your email"
-            />
-            {errors.email && <div className="text-sm text-red-500 px-2">{errors.email}</div>}
+            <div className="bg-[#4B4C4C] flex rounded-md py-1">
+              <div className="flex justify-center items-center pl-4">
+                <Image src={EmailIcon} alt="image" />
+              </div>
+              <input
+                className="w-full text-white bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-[#ffffffb7] placeholder:text-base"
+                type="email"
+                id="email"
+                name="email"
+                value={values.email}
+                onChange={handleChange}
+                placeholder="Enter Your Email"
+              />
+            </div>
+            {errors.email && (
+              <div className="text-sm text-red-500 px-2">{errors.email}</div>
+            )}
           </div>
-          <div className="mb-4">
-            <label htmlFor="password" className="block font-medium mb-2">
+          <div className="flex flex-col gap-1">
+            <label
+              className="text-base text-[#4B4C4C] font-medium"
+              htmlFor="password"
+            >
               Password
             </label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              value={values.password}
-              onChange={handleChange}
-              className="w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-2"
-              placeholder="Enter your password"
-            />
-            {errors.password && <div className="text-sm text-red-500 px-2">{errors.password}</div>}
-
+            <div className="bg-[#4B4C4C] flex rounded-md py-1">
+              <div className="flex justify-center items-center pl-4">
+                <Image src={PasswordIcon} alt="image" />
+              </div>
+              <input
+                className="w-full text-white bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-[#ffffffb7] placeholder:text-base"
+                type="password"
+                id="password"
+                name="password"
+                value={values.password}
+                onChange={handleChange}
+                placeholder="Enter Your Password"
+              />
+            </div>
+            {errors.password && (
+              <div className="text-sm text-red-500 px-2">{errors.password}</div>
+            )}
           </div>
-          <div className="mb-6">
-            <label htmlFor="password_confirmation" className="block font-medium mb-2">
+          <div className="flex flex-col gap-1">
+            <label
+              className="text-base text-[#4B4C4C] font-medium"
+              htmlFor="password"
+            >
               Confirm Password
             </label>
-            <input
-              type="password"
-              id="password_confirmation"
-              name="password_confirmation"
-              value={values.password_confirmation}
-              onChange={handleChange}
-              className="w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-2"
-              placeholder="Confirm your password"
-            />
+            <div className="bg-[#4B4C4C] flex rounded-md py-1">
+              <div className="flex justify-center items-center pl-4">
+                <Image src={PasswordIcon} alt="image" />
+              </div>
+              <input
+                className="w-full text-white bg-[#4B4C4C] border-none border outline-none p-3 rounded-md placeholder:text-[#ffffffb7] placeholder:text-base"
+                type="password"
+                id="password_confirmation"
+                name="password_confirmation"
+                value={values.password_confirmation}
+                onChange={handleChange}
+                placeholder="Enter Your Password"
+              />
+            </div>
             {errors.password_confirmation && <div className="text-sm text-red-500 px-2">{errors.password_confirmation}</div>}
-
           </div>
-          <button
-            type="submit"
-            className="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-2 disabled:bg-gray-400" disabled={loading}>Register</button>
+          <div className="mt-3">
+            <button type="submit" className="bg-[#7C6A59] py-3 w-full rounded-lg hover:bg-[#666969] text-white text-2xl font-semibold disabled:bg-gray-400" disabled={loading}>
+              SignUp
+            </button>
+          </div>
+          <div className="flex justify-end gap-1 mt-2">
+            <p className="text-[#4B4C4C] text-base font-medium ">
+              Already registered?
+            </p>
+            <Link
+              className="text-[#7C6A59] hover:text-[#4B4C4C] text-base font-medium cursor-pointer"
+              href="/account/login"
+            >
+              Login
+            </Link>
+          </div>
         </form>
-        <p className="text-sm text-gray-600 p-1">Already an User ? <Link href="/account/login" className="text-indigo-500 hover:text-indigo-600 transition duration-300 ease-in-out">Login</Link></p>
-        {serverSuccessMessage && <div className="text-sm text-green-500 font-semibold px-2 text-center">{serverSuccessMessage}</div>}
-        {serverErrorMessage && <div className="text-sm text-red-500 font-semibold px-2 text-center">{serverErrorMessage}</div>}
-
+        {serverSuccessMessage && (
+          <div className="text-sm text-green-500 font-semibold px-2 text-center">
+            {serverSuccessMessage}
+          </div>
+        )}
+        {serverErrorMessage && (
+          <div className="text-sm text-red-500 font-semibold px-2 text-center">
+            {serverErrorMessage}
+          </div>
+        )}
       </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default Register
+export default Signup;

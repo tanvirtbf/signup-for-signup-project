@@ -48,7 +48,7 @@ const verifyEmail = () => {
       <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-lg">
         <h2 className="text-2xl font-bold text-center">Verify your account</h2>
         <p className='text-sm text-center mb-6 text-gray-400'>Check your email for OTP. OTP is valid for 15 minutes. </p>
-        {loading && <div className="text-sm text-red-500 font-semibold px-2 text-center">Verifying your email please wait...</div>}
+        {/* {loading && <div className="text-sm text-red-500 font-semibold px-2 text-center">Verifying your email please wait...</div>} */}
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label htmlFor="email" className="block font-medium mb-2">
@@ -82,7 +82,7 @@ const verifyEmail = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50 disabled:bg-gray-400" disabled={loading} >Verify
+            className="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50 disabled:bg-gray-400" >Verify
           </button>
         </form>
         <p className="text-sm text-gray-600 p-1">Already an User ? <Link href="/account/login" className="text-indigo-500 hover:text-indigo-600 transition duration-300 ease-in-out">Login</Link></p>
